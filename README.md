@@ -17,7 +17,7 @@ cd powercord/src/Powercord/themes && git clone https://github.com/leeprky/Dusk
 
 For **Betterdiscord** Users:
 
-1. CLick > [Download]()
+1. CLick > [Download](https://raw.githubusercontent.com/leeprky/Dusk/main/source/support/betterdiscord/dusk.theme.css)
 2. Download Raw
 
 For **Goosemod** Users:
