@@ -1,10 +1,10 @@
 {	
-"name": "name",
-"description": "desc",
-"version": "0.0.0",
+"name": "Dusk",
+"description": "Lightweight Laptop Theme
+"version": "0.0.1,
 "author": "Leeprky#2063",
 "license": "MIT",
-"theme": "themename-config.css",
+"theme": "dusk-config.css",
 "splashTheme": "splash.css",
 "consent": "true",
 "preview": [""],
