@@ -1,9 +1,9 @@
-# name (v - Latest)
-Desc
+# Dusk (v0.0.1 - Latest)
+A Lightweight Powercord Dark Theme
 
 ![preview]()
 
-## How To Install name?
+## How To Install Dusk?
 
 Its Simple!
 
@@ -12,7 +12,7 @@ For **Powercord** Users:
 1. Open CMD & Type:
 
 ```
-cd powercord/src/Powercord/themes && git clone https://github.com/leeprky/name
+cd powercord/src/Powercord/themes && git clone https://github.com/leeprky/Dusk
 ```
 
 For **Betterdiscord** Users:
