@@ -1,1 +1,615 @@
-.
+/* */
+
+@import "https://leeprky.github.io/themes/Dusk/main.css";
+
+/* Glasscord */
+
+/*
+@import "https://leeprky.github.io/themes/Bloop/source/glasscord.css";
+.theme-dark {--glasscord-win-blur: blurbehind;--glasscord-linux-blur: true;--glasscord-macos-vibrancy: fullscreen-ui;--background-accent: var(--glasscord-accent); --background-floating: var(--glasscord-floating); 
+  --glasscord-primary: #111111e8 !important;
+  --glasscord-secondary: rgba(12, 12, 12, 0.824) !important;
+  --glasscord-secondary-alt: #080809cc !important;
+  --glasscord-accent: var(--alt-color2) !important;
+  --glasscord-tertiary: #000000a4 !important;
+  --glasscord-floating: #000000 !important;
+}
+.theme-light {
+  --glasscord-primary: #f5f1eb7e !important;
+  --glasscord-secondary: #eeece856 !important;
+  --glasscord-secondary-alt: #eeece870 !important;
+  --glasscord-accent: var(--alt-color2) !important;
+  --glasscord-tertiary: #fffdfc00 !important;
+  --glasscord-floating: #f7efe8e8 !important;
+}
+/* */
+
+:root {--im-aware: none !important} /* Turn To "block to enable */
+
+:root {
+    --text-glow: 0 0px 2.5px;
+    --avatar-glow: 0 0 2px;
+    --general-glow-strong: 0 0 5px;
+    --general-glow-weak: 0 0 1px;
+
+    --rs-avatar-shape: 50%;
+    --watermark: flex;
+
+    --bottom-bar: red;
+
+    --floating-border-radius: 12px
+}
+
+.theme-dark {
+
+    /* Main Colours - Try Keep These The Same */
+    --main-colour:  224, 41, 93; /* RGB ONLY */
+    --main-colour2: #E0295D; /* HEX ONLY */
+    --main-colour3: 343; /* HSL ONLY */
+  
+    /* Green Colours */
+    --green-color: var(--alt-color2); /* HEX ONLY */
+    --green-color2: var(--alt-color); /* RGB ONLY */
+    --green-bar-on: rgba(var(--alt-color), 0.3); /* RGBA ONLY */
+    --green-bar-bg: var(--green-color); /* RGB ONLY */
+    --green-slider-on: var(--green-color); /* RGB ONLY */
+    --green-slider-off: rgba(var(--alt-color), 0.4); /* RGBA ONLY */
+    --green-slider-dot: #fff;
+
+    --rs-online-color: var(--main-colour2);  /* Colour for online status */
+    --rs-idle-color: #f1c73d;  /* Colour for idle status */
+    --rs-dnd-color: #df4460;  /* Colour for dnd status */
+    --rs-offline-color: #636b75;  /* Colour for offline status */
+    --rs-streaming-color: #643da7;  /* Colour for streaming status */
+    --rs-invisible-color: #747f8d;  /* Colour for invisible status - Note: this will only show for your own invisibility */
+  
+    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
+    --badges-everywhere-size: 15px; /*default = 15px*/
+
+    /* Header Colours */
+    --headers: #FFFFFF; /* */
+    --headers-secondary: #b9bbbe;
+  
+    --chatbox-colour: var(--background-secondary);
+    --mentioned: rgba(var(--alt-color), 0.4);
+    --mentioned-hover: rgba(var(--alt-color), 0.2);
+  
+    /* Text Colours */
+    --namesusernames: #FFFFFF;
+    --text: #dcddde;
+    --text-positive1: var(--green-color);
+    --muted: #70757e;
+    --links: var(--alt-color2);
+    
+    /* Interative Buttons */
+    --button-interactive: #bebebe;
+    --button-interactive-hover: var(--main-colour2);
+    --button-interactive-active: #bebebe;
+    --button-interactive-muted: #5b5e61;
+  
+    /* Backgrounds */
+    --main-background: #111111;
+    --main-background-alternative: #111111;
+    --secondary-background: #141415;
+    --secondary-background-alternative: #141415;
+    --tertiary: #000000;
+    --accent: var(--alt-color2);
+    --floating: #000000;
+  
+    /* Hovering Colours */
+    --main-hover: rgba(var(--alt-color), 0.2);
+    --main-hover-active: rgba(var(--alt-color), 0.8);
+    --main-hover-selected: rgba(var(--alt-color), 0.5); 
+    --main-hover-accent: rgba(var(--alt-color), 0.1); 
+  
+    /* Infos */
+    --info-warning: var(--alt-color2);--help-warning: var(--alt-color2); --help-info: var(--alt-color2);--radio-group-dot: var(--alt-color);
+  
+    /* Drop Shadow */
+    --shadow-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+    --shadow-low: 0 1px 0 rgba(18, 20, 36, 0.767),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --shadow-medium: 0 4px 4px rgba(0,0,0,0.16);
+    --shadow-high: 0 8px 16px rgba(0,0,0,0.24);
+  
+    /* Scollbars */
+    --scrollbars: none; /* Flex To See Scrollbars / None For None */
+    --scrollbar-small: #413838;
+    --scrollbar-small-track: transparent;
+    --scrollbar-large-thumb: #413838;
+    --scrollbar-large-track: #5d4e4e;
+    --scrollbar-small-scrollbar-color: #413838;
+    --scrollbar-small-scrollbar-color-track: #5d4e4e;
+  
+    /* Button Gradients */
+    --default-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--special-gradient: 315deg, rgba(var(--alt-color), 0.1) 0%, #c987b8 74%;--red-gradient: 315deg, #AA3738 0%, #F04747 74%;--red-hsl: hsl(359, 63%, 53%);--yellow-gradient: 315deg, #c29b1b 0%, #ffa640 74%;--yellow-hsl: hsl(46, 72%, 52%);--green-gradient: 315deg, #507a73 0%, #4b7c72  74%;--grey-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--white-gradient: 315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.342) 74%;
+    --font-normal: 500;--font-hover: bold;--font-size-hover: 15px;--hover-transition: 0.1s linear;--transform-normal: scale(1);--hover-transform: scale(1.15);--setting-hover-transform: scale(1.025);--button-hover-transform: scale(1.03);
+  }
+
+  .theme-light {
+
+    /* Main Colours - Try Keep These The Same */
+    --main-colour: 29, 133, 89; /* RGB ONLY */
+    --main-colour2: #1d8559; /* HEX ONLY */
+    --main-colour3: 155; /* HSL ONLY */
+  
+    /* Green Colours */
+    --green-color: var(--alt-color2); /* HEX ONLY */
+    --green-color2: var(--alt-color); /* RGB ONLY */
+    --green-bar-on: rgba(var(--alt-color), 0.3); /* RGBA ONLY */
+    --green-bar-bg: var(--green-color); /* RGB ONLY */
+    --green-slider-on: var(--green-color); /* RGB ONLY */
+    --green-slider-off: rgba(var(--alt-color), 0.4); /* RGBA ONLY */
+    --green-slider-dot: #fff;
+  
+    /* Status/Other Things Colours */
+    --wordmark-text: "Bloop";
+    --watermark: none;
+    --square-rounding: 8px;
+    --sidebar-fade: 93%;
+    --memberlist-fade: 93%;
+    --sidebar-channels: 95%;
+
+    --text-glow: 0 0px 2.5px;
+    --avatar-glow: 0 0 6px;
+    --general-glow-strong: 0 0 5px;
+    --general-glow-weak: 0 0 1px;
+
+    --gaps: 0px;
+
+    --rs-online-color: #4cee8f;  /* Colour for online status */
+    --rs-idle-color: #f1c73d;  /* Colour for idle status */
+    --rs-dnd-color: #df4460;  /* Colour for dnd status */
+    --rs-offline-color: #636b75;  /* Colour for offline status */
+    --rs-streaming-color: #643da7;  /* Colour for streaming status */
+    --rs-invisible-color: #747f8d;  /* Colour for invisible status - Note: this will only show for your own invisibility */
+  
+    --badge-size: 22px; /*discord defualt = 18px, theme defualt = 22px;*/
+    --badge-margin: 1.5px; /*discord default = 2px, theme defualt = 1.5px*/
+    --badges-everywhere-size: 15px; /*default = 15px*/
+
+    /* Header Colours */
+    --headers: #383838; /* */
+    --headers-secondary: #343435;
+  
+    --chatbox-colour: var(--background-secondary);
+    --mentioned: rgba(var(--alt-color), 0.4);
+    --mentioned-hover: rgba(var(--alt-color), 0.2);
+  
+    /* Text Colours */
+    --namesusernames: #5c5a5a;
+    --text: #505050;
+    --text-positive1: var(--green-color);
+    --muted: #d1cecb;
+    --links: var(--alt-color2);
+    
+    /* Interative Buttons */
+    --button-interactive: #666565;
+    --button-interactive-hover: var(--main-colour2);
+    --button-interactive-active: #252525;
+    --button-interactive-muted: #999b9c;
+  
+    /* Backgrounds */
+    --main-background: #f5f1eb;
+    --main-background-alternative: #f5f1eb;
+    --secondary-background: #eeece8;
+    --secondary-background-alternative: #e7e6e4;
+    --tertiary: #ffffff;
+    --accent: var(--alt-color2);
+    --floating: #f5f5f7;
+  
+    /* Hovering Colours */
+    --main-hover: rgba(var(--alt-color), 0.2);
+    --main-hover-active: rgba(var(--alt-color), 0.8);
+    --main-hover-selected: rgba(var(--alt-color), 0.5); 
+    --main-hover-accent: rgba(var(--alt-color), 0.1); 
+  
+    /* Infos */
+    --info-warning: var(--alt-color2);--help-warning: var(--alt-color2); --help-info: var(--alt-color2);--radio-group-dot: var(--alt-color);
+  
+    /* Drop Shadow */
+    --shadow-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+    --shadow-low: 0 1px 0 rgba(18, 20, 36, 0.767),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --shadow-medium: 0 4px 4px rgba(0,0,0,0.16);
+    --shadow-high: 0 8px 16px rgba(0,0,0,0.24);
+  
+    /* Scollbars */
+    --scrollbars: none; /* Flex To See Scrollbars / None For None */
+    --scrollbar-small: #413838;
+    --scrollbar-small-track: transparent;
+    --scrollbar-large-thumb: #413838;
+    --scrollbar-large-track: #5d4e4e;
+    --scrollbar-small-scrollbar-color: #413838;
+    --scrollbar-small-scrollbar-color-track: #5d4e4e;
+  
+    /* Button Gradients */
+    --default-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--special-gradient: 315deg, rgba(var(--alt-color), 0.1) 0%, #c987b8 74%;--red-gradient: 315deg, #AA3738 0%, #F04747 74%;--red-hsl: hsl(359, 63%, 53%);--yellow-gradient: 315deg, #c29b1b 0%, #ffa640 74%;--yellow-hsl: hsl(46, 72%, 52%);--green-gradient: 315deg, #507a73 0%, #4b7c72  74%;--grey-gradient: 315deg, rgba(var(--alt-color), 0.6) 0%, rgba(var(--alt-color), 0.8) 74%;--white-gradient: 315deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.342) 74%;
+    --font-normal: 500;--font-hover: bold;--font-size-hover: 15px;--hover-transition: 0.1s linear;--transform-normal: scale(1);--hover-transform: scale(1.15);--setting-hover-transform: scale(1.025);--button-hover-transform: scale(1.03);
+  }
+
+:root {--outdated_dusk-001: none !important; --version: "0.0.1PC" !important; --build: "001" !important}
+
+/* -==-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* Background */
+body {
+  background-color: transparent !important;
+}
+#app-mount {
+  border-radius: 14px;
+}
+
+/* Main */
+::-webkit-scrollbar {
+  display: var(--scrollbars);
+}
+
+/* Members List  */
+/* Status Mask */
+mask[id^="svg-mask-avatar-status-round"] circle:last-of-type {
+    cy: 16.625%;
+}
+mask[id^="svg-mask-avatar-status-mobile"] rect {
+    y: 0%;
+}
+mask[id^="svg-mask-avatar-status-typing"] rect {
+    y: -9.375%
+}
+.mask-1FEkla rect {
+    y: 5.6%;
+} 
+.mask-1FEkla rect[mask*="status-online-mobile)"] {
+    y: 7.3%;
+}
+:is(.avatar-6qzftW, .avatar-2MSPKk, .avatar-1EWyVD) .mask-1FEkla rect:not([mask*="status-online-mobile)"]) {
+    y: 0% !important;
+}
+.mask-1FEkla .dots-1BwzZQ {
+    transform: translateY(-69%)
+}
+/* Role Name */
+.membersGroup-2eiWxl {
+    height: 40px;
+    padding-bottom: 32px;
+    font-size: 11.5px;
+}
+/* Member Layout */
+.roleColor-nA7BqX {
+    color: var(--text);
+}
+.roleIcon-2cey4v {
+    margin-right: 8px;
+    transform: scale(0.92);
+}
+.member-2gU6Ar {
+    transform: scale(0.93);
+    margin-left: 0px;
+    font-size: 12px;
+    font-weight: 480;
+}
+.content-2a4AW9 .layout-1qmrhw  {
+    width: 243px;
+}
+
+.subText-OGOWMj {
+  display: none;
+}
+.avatar-6qzftW {
+  transform: scale(0.95);
+}
+
+.members-3WRCEx, .members-3WRCEx>div {
+  background-color: var(--main-background);
+}
+
+.members-3WRCEx, .members-3WRCEx>div {
+    width: 260px;
+}
+
+/* Windows Bar */
+.withFrame-2dL45i {
+    height: 0px;
+    margin-top: 0px;
+    position: relative;
+    left: 90px;
+    width: calc(100% - 90px);
+  }
+  .winButton-3UMjdg {
+    transform: scale(1);
+    height: 49px;
+    width: 39px;
+    margin-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  [role="button"][aria-label="Close"]:hover {
+    background-color: var(--main-colour2);
+  }
+  .wordmark-2u86JB:after {
+    color: rgb(247, 245, 245);
+    content: ""var(--wordmark-text)" | " var(--version)"";
+    display: var(--watermark);
+    font-size: 14.5px;
+    font-weight: 700;
+    position: absolute;
+    width: 4000px;
+    top: 10px;
+    left: -40%;
+  }
+  .wordmark-2u86JB > svg {width: 0px;}
+
+/* Channel List */
+@font-face {
+font-family: dash2space;
+ unicode-range: U+002D;
+src: url(https://smarty6788.github.io/Dash2Space/src/font/dash2space.ttf) format('truetype'), url(https://smarty6788.github.io/Dash2Space/font/dash2space.woff2) format('woff2')
+}
+#app-mount [data-list-item-id*="channels___upcoming-events-"]>div.name-28HaxV {
+font-size: 14px;
+font-family: dash2space, var(--font-primary);
+text-transform: capitalize
+}
+.autocompleteRowVertical-EA9dCg[data-list-item-id*=channel-autocomplete] .autocompleteRowContentPrimary-1kUW9H .colorInteractiveActive-30E9n8,
+.content-2a4AW9 .emptyChannelIcon-1YdEz2~.size32-5yOQel,
+.quickswitcher-pKcM9U .result-u66Ywh .match-20K5f5,
+.sidebar-1tnWFu .mainContent-20q_Hp[href] .channelName-3KPsGw,
+.title-31SJ6t .iconWrapper-2awDjA+.title-17SveM,
+.wrapper-1ZcZW-[class="wrapper-1ZcZW- mention interactive"] {
+font-family: dash2space, var(--font-primary);
+text-transform: capitalize
+}
+.sidebar-1tnWFu {
+    border-radius: 0px !important;
+}
+.iconContainer-21RCa3 {
+  transform: scale(0.7);
+}
+.channelName-3KPsGw {
+  transform: scale(0.93);
+  margin-left: -5px;
+}
+
+.unread-36eUEm {
+  padding-right: 0px;
+  margin-left: 20px;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  z-index: 999;
+  margin-top: -6px;
+}
+
+/* Titlebar */
+.title-17SveM, .toolbar-3_r2xA {
+  margin-right: 140px;
+}
+.iconWrapper-2awDjA::after {
+  content: attr(aria-label);
+  padding-left: 30px;
+  bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+}
+.iconWrapper-2awDjA:hover {
+  color: var(--alt-color2);
+}
+.icon-1ELUnB::after {
+  bottom: -0px;
+  left: -20px;
+}
+.icon-1ELUnB {
+  left: 20px;
+}
+
+.topic-11NuQZ.expandable-3CaLeS {
+  margin-left: -140px;
+}
+
+
+
+/* * * Solid top bar * * */
+[class^="sidebar"] {
+  border-radius: initial !important;
+}
+/* Server with a banner */
+[class*="container"][class*="clickable"][class*="hasBanner"][class*="bannerVisible"] > header[class^="header"] {filter: none; }
+[class*="container"][class*="clickable"][class*="hasBanner"][class*="bannerVisible"] > header[class^="header"]::before {
+  content: '';
+  width: 240px;
+  height: inherit;
+  display: block;
+  opacity: 0.5;
+  position: fixed;
+  left: 72px;
+  z-index: -1;
+}
+.header-3OsQeK {
+  box-shadow: none;
+}
+.animatedContainer-2laTjx {
+  box-shadow: none;
+}
+.animatedContainer-2laTjx::before {
+  background: linear-gradient(transparent 0%, var(--background-secondary) 100%, transparent 0%);
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.children-3xh0VB {
+  -webkit-app-region: drag;
+  background-color: red;
+  border-radius: 12px;
+}
+
+
+
+.search-39IXmY {
+  margin: 0 8px;
+}
+.searchBar-zdmu7v  {
+  background-color: var(--main-background) !important;
+  width: 52px;
+  transition: 300ms;
+}
+[class="search-1FM8Qc open-3y3yI_ focused-8aNhVB"] .searchBar-zdmu7v, [class="search-1FM8Qc open-3y3yI_"] .searchBar-zdmu7v {
+  width: 162px;
+  transition: 300ms;
+}
+.searchBar-zdmu7v .icon-1nNws_ {
+  margin-right: 150px;
+  position: absolute;
+}
+.icon-18rqoe {
+  color: white !important;
+  transform: scale(1.3) !important;
+  margin-top: 1px;
+  margin-left: -21px; 
+}
+.search-1FM8Qc .DraftEditor-root .public-DraftEditor-content, .search-1FM8Qc .DraftEditor-root .public-DraftEditorPlaceholder-root {
+  color: var(--text) !important;
+  margin-top: 1px;
+  margin-left: 4px;
+}
+.searchBar-zdmu7v {
+  margin-top: -1px;
+  margin-left: 12px;
+}
+
+.container-2McqkF {
+  position: relative;
+  left: -140px;
+  border-radius: var(--floating-border-radius);
+}
+
+/* Other */
+.focusRing-2_fyOA {
+  color: var(--alt-color2) !important;
+  fill: var(--alt-color2) !important;
+}
+
+
+/* Server List */
+
+.lowerBadge-3WTshO {
+  transition: 300ms;
+  background-color: var(--alt-color2) !important;
+  animation-name: NumberBadgeGrow;
+  animation-duration: 6s;
+}
+ /* The animation code */
+ @keyframes PingAnimationGrow {
+  0%   {transform: scale(1);}
+  5%   {transform: scale(1.02);}
+  10%  {transform: scale(1.04);}
+  15%   {transform: scale(1.06);}
+  20%  {transform: scale(1.08);}
+  25%   {transform: scale(1.10);}
+  30%  {transform: scale(1.12);}
+  35%   {transform: scale(1.14);}
+  40% {transform: scale(1.16);}
+  45%   {transform: scale(1.18);}
+  50% {transform: scale(1.20);}
+  55%   {transform: scale(1.18);}
+  60% {transform: scale(1.16);}
+  65%   {transform: scale(1.14);}
+  70% {transform: scale(1.12);}
+  75%   {transform: scale(1.10);}
+  80% {transform: scale(1.08);}
+  85%   {transform: scale(1.06);}
+  90% {transform: scale(1.04);}
+  95%   {transform: scale(1.02);}
+  100% {transform: scale(1);}
+}
+
+/* The element to apply the animation to */
+.lowerBadge-3WTshO, .unread-36eUEm {
+  animation-name: PingAnimationGrow !important;
+  animation-duration: 6s;
+  animation-delay: 1s;
+  border-radius: 14px;
+  animation-iteration-count: infinite;
+} 
+
+[aria-label="Deafen"][aria-checked="true"],[aria-label="Mute"][aria-checked="true"] {
+  background-color: rgba(var(--alt-color), 0.1);
+  color: var(--text-normal);
+}
+
+.button-12Fmur:hover {
+  background-color: rgba(var(--alt-color), 0.05) !important;
+  transition: 300ms;
+}
+
+.button-12Fmur:hover[aria-label="Deafen"],.button-12Fmur:hover[aria-label="Mute"] {
+  background-color: rgba(var(--alt-color), 0.3) !important;
+  transition: 300ms;
+}
+
+.guilds-2JjMmN {
+  width: 81.2px;
+  position:relative;
+  margin-top: -10px;
+}
+.scroller-3X7KbA {
+  padding: 5.5px;
+  padding-top: 20px !important;
+  -webkit-mask-image: linear-gradient(to bottom, black var(--sidebar-fade), transparent 100%);
+}
+.platform-win .appMount-2yBXZl .app-3xd6d0 .scroller-3X7KbA {
+  padding-top: 21px;
+}
+.platform-win .layers-OrUESM, .platform-win .layers-1YQhyW, .platform-win .layers-OrUESM > .layer-86YKbF, .platform-win .container-1eFtFS {
+  overflow: visible;
+  
+}
+:root .guilds-2JjMmN .scroller-3X7KbA .listItem-1d8GP4 .wrapper-3kah-n,
+.expandedFolderIconWrapper-Huv7rA, .folder-1hbNCn, .folderIconWrapper-1_bOZe, .circleIconButton-1XqULR, .circleIconButton-1XqULR.selected-2tb4pB {
+  border-radius: 50% !important;
+  overflow: hidden;
+}
+.listItem-3SmSlK{
+  transform: scale(0.88);
+}
+
+.circleIconButton-1VxDrg{
+  color: var(--green-color); 
+  background-color: var(--background-primary) !important;
+}
+.circleIconButton-1VxDrg:hover
+{background-color: var(--green-color) !important;color: white !important}
+
+.unreadMentionsIndicatorBottom-3RJMnQ {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  width: 65px;
+}
+.unreadMentionsIndicatorTop-2bTgUU {
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 65px;
+}
+.mention-3XBnnZ {
+  background-color: var(--main-colour2);
+}
+
+.info-1sUqUG:after {
+  content: var(--version-latest-long) !important;
+  font-size: 12px !important;
+  display: inline !important;
+  opacity: 1 !important;
+  padding: 0 !important;
+  cursor: text !important;
+  visibility: visible !important;
+  position: relative !important;
+  top: unset !important;
+  left: unset !important;
+  bottom: -10px !important;
+  right: unset !important;
+  transform: unset !important;
+  animation: unset !important;
+  text-transform: none !important;
+}
